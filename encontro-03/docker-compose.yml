@@ -1,5 +1,6 @@
 services:
   api:
+    container_name: encontro-03
     build: .
     ports:
       - "3000:3000"
