@@ -2,7 +2,6 @@ services:
   api:
     container_name: pratica-01
     build: .
-    user: "1000:1000"
     ports:
       - "3000:3000"
     volumes:
