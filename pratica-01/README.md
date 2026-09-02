@@ -16,8 +16,8 @@ araujo@empresa.com (auditor)
 
 - Material consultado: https://supertokens.com/blog/http-error-codes-401-vs-403
 
-- Diferenças entre casos sem token e papeis não autorizados
+- Diferenças entre casos sem token e papeis não altorizados
 Casos sem token geram o código 401 (Unauthorized). Esses casos indicam que o sistema não identificou aquele usuário,
-ou seja, ele não foi autenticado corretamente
+ou seja, ele não foi altenticado corretamente
 Casos de papeis não altorizados geram o código 403 (Forbidden). Esses casos indicam que o sistema reconheceu que são usuários autenticados,
 mas eles não possuem altorização para acessar aquela determinada rota.
