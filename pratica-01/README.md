@@ -9,10 +9,8 @@ docker compose down
 
 - Contas Personalizadas:
 paulo@empresa.com (gestor)
-20251038060001
 
 araujo@empresa.com (auditor)
-10006083015202
 
 - Material consultado: https://supertokens.com/blog/http-error-codes-401-vs-403
 
