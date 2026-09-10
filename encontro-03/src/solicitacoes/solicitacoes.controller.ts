@@ -10,27 +10,28 @@ export class SolicitacoesController {
   constructor(private readonly solicitacoesService: SolicitacoesService) { }
 
   @UseGuards(JwtAuthGuard)
-  @Get()
-  listar() {
-    return this.solicitacoesService.listar();
-  }
+@Post()
+criar(@Body() dto: CriarSolicitacaoDto) {
+  return this.solicitacoesService.criar(dto);
+}
 
-  @UseGuards(JwtAuthGuard)
-  @Get(':id')
-  buscarPorId(@Param('id', ParseIntPipe) id: number) {
-    return this.solicitacoesService.buscarPorId(id);
-  }
+@UseGuards(JwtAuthGuard)
+@Get()
+listar() {
+  return this.solicitacoesService.listar();
+}
 
-  @UseGuards(JwtAuthGuard, RolesGuard)
-  @Roles('gestor')
-  @Patch(':id/aprovar')
-  aprovar(@Param('id', ParseIntPipe) id: number) {
-    return this.solicitacoesService.aprovar(id);
-  }
+@UseGuards(JwtAuthGuard)
+@Get(':id')
+buscarPorId(@Param('id', ParseIntPipe) id: number) {
+  return this.solicitacoesService.buscarPorId(id);
+}
 
-  @UseGuards(JwtAuthGuard)
-  @Post()
-  criar(@Body() dto: CriarSolicitacaoDto) {
-    return this.solicitacoesService.criar(dto);
-  }
+@UseGuards(JwtAuthGuard, RolesGuard)
+@Roles('gestor')
+@Patch(':id/aprovar')
+aprovar(@Param('id', ParseIntPipe) id: number) {
+  return this.solicitacoesService.aprovar(id);
+}
+  
 }

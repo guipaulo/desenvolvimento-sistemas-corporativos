@@ -8,6 +8,7 @@ import {
 } from 'typeorm';
 
 export type StatusSolicitacao = 'pendente' | 'aprovada';
+export type NivelPrioridade = 'normal' | 'urgente';
 
 @Entity({ name: 'solicitacoes' })
 export class Solicitacao {
@@ -16,6 +17,12 @@ export class Solicitacao {
 
   @Column({ type: 'varchar', length: 150 })
   titulo!: string;
+
+  @Column({ type: 'varchar', length: 30 })
+  centroCusto!: string;
+
+  @Column({ type: 'varchar', length: 10, default: 'normal' })
+  prioridade!: NivelPrioridade;
 
   @Column({ type: 'varchar', length: 20, default: 'pendente' })
   status!: StatusSolicitacao;
