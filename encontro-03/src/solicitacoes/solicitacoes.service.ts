@@ -119,7 +119,6 @@ export class SolicitacoesService {
           'A solicitação foi alterada; consulte novamente',
         );
       }
-      throw new Error('Erro proposital para testar a transação');
       await manager.insert(Auditoria, {
         atorId,
         acao: 'SOLICITACAO_REJEITADA',
