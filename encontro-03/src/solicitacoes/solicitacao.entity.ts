@@ -7,7 +7,7 @@ import {
   VersionColumn,
 } from 'typeorm';
 
-export type StatusSolicitacao = 'pendente' | 'aprovada';
+export type StatusSolicitacao = 'pendente' | 'aprovada' | 'rejeitada';
 export type NivelPrioridade = 'normal' | 'urgente';
 
 @Entity({ name: 'solicitacoes' })

@@ -22,6 +22,9 @@ export class Auditoria {
   @Column({ name: 'recurso_id', type: 'int' })
   recursoId!: number;
 
+  @Column({name: 'motivo', type: 'varchar', length: 50, nullable: true})
+  motivo?: string;
+
   @Column({ type: 'jsonb', nullable: true })
   detalhes!: Record<string, unknown> | null;
 
